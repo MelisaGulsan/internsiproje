@@ -11,8 +11,9 @@ import { ContainerMiddleComponent } from './container/container-middle/container
 import { TabComponent } from './tab/tab.component';
 import { Route, RouterModule, Routes } from '@angular/router';
 import { WeatherComponent } from './weather/weather.component';
-import { LoginPageComponent } from './login-page/login-page.component';
+import { LoginPageComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { UserService } from './_services/users.service';
 
 
 @NgModule({
@@ -33,7 +34,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

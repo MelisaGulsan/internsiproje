@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Records } from '../services/records'
+import { Records } from '../_controller/records'
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-@Injectable()
-export class PostService{
-    constructor(private http: HttpClient) { }
+@Injectable({providedIn:'root'})
+export class UserService{
 
-    getAllPosts(): Observable<Records[]>{
-        return this.http.get<Records[]>("");
+    private validUsername='MelisaGulsan';
+
+    checkUsername(userName:string):boolean{
+        return userName===this.validUsername;
     }
+    constructor() { }
+
 }
