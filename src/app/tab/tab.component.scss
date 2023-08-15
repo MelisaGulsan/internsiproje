@@ -1,0 +1,34 @@
+div {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  justify-content: space-around;
+  width: calc(100% / lastNumber);
+  font-family: "https://eng.fontke.com/family/1289193/";
+}
+div.btn {
+  width: 100%;
+  color: #ffffff;
+  background: linear-gradient(to bottom, #bd4b04f2, #ff6b0fe7);
+  border-top: 1px #ffffff solid;
+  border-left: 1px #ffdecc solid;
+  border-bottom: 1px #e3831d solid;
+  border-right: 1px #e3831d solid;
+  font: bold 11px Arial, Helvetica, sans-serif;
+
+  &.online {
+  background: linear-gradient(to bottom, #e3831d, #f7be00);
+  }
+}
+div.btn:hover {
+  border-top: 1px solid #bd4b04f2;
+  border-left: 1px solid #bd4b04f2;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  color: #000000;
+
+}
+.sharebuttons a {
+  color: #fff !important;
+}

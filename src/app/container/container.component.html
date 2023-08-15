@@ -1,0 +1,13 @@
+<app-tab (messageEvent)="childMessage($event)" ></app-tab>
+<div class="mt-3 bckI"  >
+  <div *ngIf="tab1">
+    <app-container-left [childPosition]="parentLeft"></app-container-left>
+  </div>
+  <div *ngIf="tab2">
+    <app-container-middle [childPosition]="parentMid"></app-container-middle>
+  </div>
+  <div *ngIf="tab3">
+    <app-container-right [childPosition]="parentRight"></app-container-right>
+  </div>
+</div>
+

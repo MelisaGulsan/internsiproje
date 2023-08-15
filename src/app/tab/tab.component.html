@@ -1,0 +1,15 @@
+<nav >
+  <div 
+  class="deneme sharebuttons btn-group btn-group-lg btn-group-justified"
+>
+  <div type="button" class="btn"
+    *ngFor="let item of obj; let i = index"
+    id="changeColor[index]"
+    (click)="tabClk(item.type,item.position,item.active,i)"
+    [ngClass]="{online: (item.active ? true:false)}"
+>
+  {{ item.name }} 
+  </div>
+</div>
+
+</nav>

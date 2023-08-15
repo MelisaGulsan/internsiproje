@@ -1,0 +1,31 @@
+<section>
+  <a routerLink="">
+    <img src="../../assets/back_icon.png">
+  </a>
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-10 col-lg-8 col-xl-6">
+        <div class="card">
+          <div class="bg-image">
+            <img
+              src="https://c1.wallpaperflare.com/preview/970/253/226/kizkulesi-istanbul-city-bosphorus-kulesi-kiz.jpg"
+              class="card-img"
+              alt="weather"
+            />
+            <div
+              class="mask"
+              style="background-color: rgba(49, 156, 222, 0.5)"
+            ></div>
+          </div>
+          <div class="weather card-img-overlay p-5">
+            <h4 class="mb-0">{{ city }}</h4>
+            <p class="display-2 my-3">1.28°C</p>
+            <p class="mb-2">
+              Today: <strong>{{ today | date }}</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

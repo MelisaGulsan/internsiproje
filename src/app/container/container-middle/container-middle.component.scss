@@ -1,0 +1,16 @@
+.card div:first-of-type {
+  background-image: url("https://latestnews360.com/wp-content/uploads/2023/05/migros-supermarket.jpg");
+  border-radius: 5px;
+  
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .cardText:first-child {
+    padding: 20px;
+    background: #ffffffd3;
+    border-radius: 20px;
+    opacity: 0.8;
+    font-weight:initial;
+  }
+}
