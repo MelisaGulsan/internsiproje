@@ -1,4 +1,5 @@
-import { AfterViewChecked, Component } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../_services/users.service';
 
@@ -7,15 +8,16 @@ import { UserService } from '../_services/users.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
-export class LoginPageComponent {
+export class LoginComponent {
   
-  constructor(private loginService: UserService, private router:Router) {}
+  constructor(private userService: UserService, private router:Router) {}
   
   userName:string='';
 
 
   login() {
-  if(this.loginService.checkUsername(this.userName)){
+  if(this.userService.isAuthenticatedUser(this.userName)){
+    
     this.router.navigate(['/container']);
   }else{
     alert('geçersiz');

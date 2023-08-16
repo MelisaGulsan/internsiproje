@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'; // <-- import HttpClientModule
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -9,11 +9,11 @@ import { ContainerLeftComponent } from './container/container-left/container-lef
 import { ContainerRightComponent } from './container/container-right/container-right.component';
 import { ContainerMiddleComponent } from './container/container-middle/container-middle.component';
 import { TabComponent } from './tab/tab.component';
-import { Route, RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { WeatherComponent } from './weather/weather.component';
-import { LoginPageComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './_services/users.service';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -26,6 +26,7 @@ import { UserService } from './_services/users.service';
     ContainerMiddleComponent,
     TabComponent,
     WeatherComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +35,7 @@ import { UserService } from './_services/users.service';
     HttpClientModule,
     FormsModule
   ],
+  
   providers: [UserService],
   bootstrap: [AppComponent]
 })
