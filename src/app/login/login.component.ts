@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../_services/users.service';
 
@@ -13,14 +13,18 @@ export class LoginComponent {
   constructor(private userService: UserService, private router:Router) {}
   
   userName:string='';
-
+  error:string="";
+  
 
   login() {
-  if(this.userService.isAuthenticatedUser(this.userName)){
+  
+    if(this.userService.isAuthenticatedUser(this.userName)){
     
-    this.router.navigate(['/container']);
-  }else{
-    alert('geçersiz');
-  }
+      this.router.navigate(['/container']);
+    }else{
+      this.error="Incorrect username or missing information"
+    }
+
+ 
   }
 }
