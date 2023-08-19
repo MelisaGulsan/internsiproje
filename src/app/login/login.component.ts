@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserService } from '../services/users.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +10,7 @@ import { UserService } from '../services/users.service';
 })
 export class LoginComponent {
   
-  constructor(private userService: UserService, private router:Router) {}
+  constructor(private authService: AuthService, private router:Router) {}
   
   userName:string='';
   error:string="";
@@ -18,9 +18,9 @@ export class LoginComponent {
 
   login() {
   
-    if(this.userService.isAuthenticatedUser(this.userName)){
+    if(this.authService.login(this.userName)){
     
-      this.router.navigate(['/container']);
+      this.router.navigate(['/home']);
     }else{
       this.error="Incorrect username or missing information"
     }

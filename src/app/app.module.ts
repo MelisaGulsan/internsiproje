@@ -12,8 +12,9 @@ import { TabComponent } from './tab/tab.component';
 import { RouterModule } from '@angular/router';
 import { WeatherComponent } from './weather/weather.component';
 import { FormsModule } from '@angular/forms';
-import { UserService } from './_services/users.service';
+import { AuthService } from './services/auth.service';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { LoginComponent } from './login/login.component';
     ContainerMiddleComponent,
     TabComponent,
     WeatherComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,7 @@ import { LoginComponent } from './login/login.component';
     FormsModule
   ],
   
-  providers: [UserService],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
