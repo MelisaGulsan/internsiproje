@@ -1,6 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { AuthService } from '../services/auth.service';
-import { Router } from '@angular/router';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-home',
@@ -8,15 +8,5 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  username: string='';
 
-  constructor(private authService: AuthService, private router: Router) {}
-
-  login(){
-    if(this.authService.login(this.username)){
-      this.router.navigate(['/home']);
-    }else{
-      alert('Hatalı kullanıcı adı');
-    }
-  }
 }

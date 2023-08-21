@@ -9,7 +9,6 @@ export class AuthService {
   private userName:string ='';
 
   login(userName:string):boolean{
-    debugger
     if (userName==='MelisaGulsan') {
       this.isAuthenticated=true;
       this.userName=userName;

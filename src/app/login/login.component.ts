@@ -17,7 +17,6 @@ export class LoginComponent {
   
 
   login() {
-  
     if(this.authService.login(this.userName)){
     
       this.router.navigate(['/home']);
