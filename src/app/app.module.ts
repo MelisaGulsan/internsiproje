@@ -9,12 +9,14 @@ import { ContainerLeftComponent } from './container/container-left/container-lef
 import { ContainerRightComponent } from './container/container-right/container-right.component';
 import { ContainerMiddleComponent } from './container/container-middle/container-middle.component';
 import { TabComponent } from './tab/tab.component';
-import { RouterModule } from '@angular/router';
 import { WeatherComponent } from './weather/weather.component';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { RouterModule } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
+
 
 
 @NgModule({
@@ -28,7 +30,8 @@ import { HomeComponent } from './home/home.component';
     TabComponent,
     WeatherComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
