@@ -2,45 +2,92 @@
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
-        <div class="card" style="border-radius: 1rem;">
+        <div class="card" style="border-radius: 1rem">
           <div class="row g-0">
             <div class="col-md-6 col-lg-5 d-none d-md-block">
-              <img src="https://cdn.freebiesupply.com/logos/large/2x/migros-1-logo-svg-vector.svg"
-                alt="login form" class="img-fluid" />
+              <img
+                src="https://cdn.freebiesupply.com/logos/large/2x/migros-1-logo-svg-vector.svg"
+                alt="login form"
+                class="img-fluid"
+              />
             </div>
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
-
                 <form (ngSubmit)="login()" #form="ngForm">
-
                   <div class="d-flex align-items-center mb-3 pb-1">
-                    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                    <i
+                      class="fas fa-cubes fa-2x me-3"
+                      style="color: #ff6219"
+                    ></i>
                   </div>
 
-                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px">
+                    Sign into your account
+                  </h5>
 
                   <div class="form-outline mb-4">
                     <label class="form-label">User Name:</label>
 
-                    <input type="text" class="form-control form-control-lg" [(ngModel)]="userName" name="userName" required />
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      [(ngModel)]="userName"
+                      name="userName"
+                      required
+                    />
                   </div>
 
                   <!-- <div class="form-outline mb-4">
                     <input type="password" id="form2Example27" class="form-control form-control-lg" />
                     <label class="form-label" for="form2Example27">Password</label>
                   </div> -->
-                  <div class="form-outline mb-4 bg-danger text-center text-white" *ngIf="error!=null">{{error}}</div>
+                  <!-- <div class="form-outline mb-4 bg-danger text-center text-white" *ngIf="error!=null">{{error}}</div> -->
                   <div class="pt-1 mb-4">
-                    <button class="btn btn-dark btn-lg btn-block" type="submit" (click)="login()">Login</button>
+                    <button
+                      class="btn btn-dark btn-lg btn-block"
+                      type="submit"
+                      (click)="login()"
+                    >
+                      Login
+                    </button>
                   </div>
 
+                  <!-- -->
+                  <div class="container" *ngIf="users && users.length > 0">
+                    <div class="row">
+                      <div *ngFor="let item of users" class="col-2 m-3">
+                        <div class="card" style="width: 18rem">
+                          <img
+                            src="{{ item.avatar_url }}"
+                            class="card-img-top"
+                            alt="..."
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">{{ item.login }}</h5>
+                            <a
+                              href="{{ item.html_url }}"
+                              class="btn btn-primary"
+                              >Github Profil</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row" *ngIf="users && users.length == 0">
+                    User Not Found
+                  </div>
+
+                  <!-- -->
+
                   <a class="small text-muted" href="#!">Forgot password?</a>
-                  <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="#!"
-                      style="color: #393f81;">Register here</a></p>
+                  <p class="mb-5 pb-lg-2" style="color: #393f81">
+                    Don't have an account?
+                    <a href="#!" style="color: #393f81">Register here</a>
+                  </p>
                   <a href="#!" class="small text-muted">Terms of use.</a>
                   <a href="#!" class="small text-muted">Privacy policy</a>
                 </form>
-
               </div>
             </div>
           </div>

@@ -1,29 +1,41 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { UsersListService } from '../services/user-list.service';
+import { User } from '../models/user';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent {
-  
-  constructor(private authService: AuthService, private router:Router) {}
-  
-  userName:string='';
-  error:string="";
-  
+export class LoginComponent implements OnInit {
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private usersListService: UsersListService
+  ) {}
+  users!: User[];
 
-  login() {
-    if(this.authService.login(this.userName)){
-    
+  userName: string = '';
+  //error:string="";
+
+  ngOnInit(): void {
+    if(this.users){
       this.router.navigate(['/home']);
-    }else{
-      this.error="Incorrect username or missing information"
+      }else{
+      alert("not found");
+      }
+  }
+  login() {
+    let list: User[] = [];
+    this.usersListService.getUser(this.userName).subscribe((data) => {
+      list.push(data);
     }
-
- 
+    
+    );
+    this.users = list;
+    
   }
 }
