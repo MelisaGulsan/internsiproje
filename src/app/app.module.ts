@@ -11,11 +11,11 @@ import { ContainerMiddleComponent } from './container/container-middle/container
 import { TabComponent } from './tab/tab.component';
 import { WeatherComponent } from './weather/weather.component';
 import { FormsModule } from '@angular/forms';
-import { AuthService } from './services/auth.service';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
+import { UsersListService } from './services/user-list.service';
 
 
 
@@ -41,7 +41,7 @@ import { FooterComponent } from './footer/footer.component';
     FormsModule
   ],
   
-  providers: [AuthService],
+  providers: [UsersListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

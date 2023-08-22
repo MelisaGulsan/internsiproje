@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../services/auth.service';
 import { UsersListService } from '../services/user-list.service';
 import { User } from '../models/user';
 
@@ -12,7 +11,6 @@ import { User } from '../models/user';
 })
 export class LoginComponent implements OnInit {
   constructor(
-    private authService: AuthService,
     private router: Router,
     private usersListService: UsersListService
   ) {}
@@ -22,20 +20,17 @@ export class LoginComponent implements OnInit {
   //error:string="";
 
   ngOnInit(): void {
-    if(this.users){
-      this.router.navigate(['/home']);
-      }else{
-      alert("not found");
-      }
+   
   }
   login() {
     let list: User[] = [];
     this.usersListService.getUser(this.userName).subscribe((data) => {
       list.push(data);
+      this.router.navigate(['/home'])
     }
     
     );
     this.users = list;
-    
   }
+  
 }
