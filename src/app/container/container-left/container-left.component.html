@@ -1,47 +1,108 @@
-<div class="card">
-  <div class="card-body">
-    <div class="cardText">
-      <h4 class="card-title">Component {{ childPosition }}</h4>
-      <p class="card-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Et tortor consequat
-        id porta nibh venenatis cras sed felis. Erat nam at lectus urna duis.
-        Commodo elit at imperdiet dui accumsan. Dignissim diam quis enim
-        lobortis. Nisl nisi scelerisque eu ultrices. Leo a diam sollicitudin
-        tempor id. A erat nam at lectus. Magna etiam tempor orci eu lobortis
-        elementum nibh tellus molestie. Mollis aliquam ut porttitor leo a diam
-        sollicitudin tempor. Nunc sed augue lacus viverra vitae congue eu
-        consequat. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum.
-        Integer enim neque volutpat ac tincidunt vitae.<br /><br />
-        Amet purus gravida quis blandit turpis. Pulvinar etiam non quam lacus
-        suspendisse. Massa enim nec dui nunc mattis. Sit amet porttitor eget
-        dolor morbi non. Mauris pellentesque pulvinar pellentesque habitant
-        morbi tristique. Dignissim enim sit amet venenatis urna cursus eget nunc
-        scelerisque. Vehicula ipsum a arcu cursus vitae congue mauris rhoncus
-        aenean. Sit amet mauris commodo quis imperdiet massa. Enim nulla aliquet
-        porttitor lacus luctus accumsan tortor posuere. Aliquam faucibus purus
-        in massa tempor. Purus sit amet luctus venenatis lectus magna. Vel orci
-        porta non pulvinar.<br /><br />
-        Velit egestas dui id ornare arcu odio ut sem. Ornare arcu odio ut sem
-        nulla pharetra diam sit. Arcu risus quis varius quam quisque.
-        Pellentesque sit amet porttitor eget. Eu facilisis sed odio morbi quis
-        commodo odio aenean. Est ullamcorper eget nulla facilisi etiam. Libero
-        id faucibus nisl tincidunt eget nullam non. Etiam tempor orci eu
-        lobortis. Egestas pretium aenean pharetra magna ac. A lacus vestibulum
-        sed arcu non odio euismod lacinia. Porttitor eget dolor morbi non arcu
-        risus.
-      </p>
-      <button
-        type="button"
-        class="btn"
-        data-toggle="button"
-        routerLink="/weather"
-        routerLinkActive="active"
-        ariaCurrentWhenActive="page"
-      >
-        Weather
-      </button>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="cardText">
+        <h4 class="card-title" *ngIf="name!=null">Welcome, {{ name }}</h4>
+        <h4 class="card-title" *ngIf="name==null">Welcome, {{ userName }}</h4>
+
+
+        <section class="vh-100" style="background-color: #f4f5f7;">
+          <div class="container py-5 h-100" *ngIf="users && users.length > 0">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col col-lg-6 mb-4 mb-lg-0">
+                <div class="card mb-3" style="border-radius: 0.5rem">
+                  <div class="row g-0" *ngFor="let item of users">
+                    <div
+                      class="col-md-4 gradient-custom text-center text-white"
+                      style="
+                        border-top-left-radius: 0.5rem;
+                        border-bottom-left-radius: 0.5rem;
+              
+                      "
+                    >
+                      <img
+                        src="{{ item.avatar_url }}"
+                        alt="Avatar"
+                        class="img-fluid my-5"
+                        style="width: 100px; border-radius: 0.5rem;"
+                      />
+                      <h4 *ngIf="item.name != null">{{ item.name }}</h4>
+                      <h6 *ngIf="item.company != null">Company: {{ item.company }}</h6>
+        
+                      <h6 class="text-muted" *ngIf="item.created_at != null" style="font-size: 10px;">Profile Creation Date:<br> {{ (item.created_at) }}</h6>
+        
+                      <a href="{{ item.html_url }}" class="btn btn-dark mt-4" target="_blank"
+                    ><i class="bi bi-github"></i> Profile</a
+                  >
+        
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body p-4">
+                        <h6>Information</h6>
+                        <hr class="mt-0 mb-4" />
+                        <div class="row pt-1">
+                          <div class="col-6 mb-3">
+                            <h6>Username</h6>
+                            <p class="text-muted">{{ item.login }}</p>
+                          </div>
+                          <div class="col-6 mb-3" *ngIf="item.following != null">
+                            <h6  >Following</h6>
+                            <p class="text-muted">{{ item.following }}</p>
+                          </div>
+                          <div class="col-6 mb-3" *ngIf="item.followers != null">
+                            <h6>Followers</h6>
+                            <p class="text-muted" > {{ item.followers }}</p>
+                          </div>
+                          <div class="col-6 mb-3" *ngIf="item.public_repos != null">
+                            <h6>Repositories</h6>
+                            <p class="text-muted" >{{item.public_repos}}</p>
+                          </div>
+                        </div>
+                        <h6>Overview</h6>
+                        <hr class="mt-0 mb-4" />
+                        <div class="row pt-1">
+                          <div class="col-6 mb-3"  *ngIf="item.followers != null">
+                            <h6>Followers</h6>
+                            <p class="text-muted">{{ item.followers }}</p>
+                          </div>
+                          <div class="col-6 mb-3" *ngIf="item.following != null">
+                            <h6>Following</h6>
+                            <p class="text-muted">{{ item.following }}</p>
+                          </div>
+                          
+                          <div class="col-12 mb-6" *ngIf="item.blog != null">
+                            <h6>Blog</h6>
+                            <p class="text-muted">{{ item.blog }}</p>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                          <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
+                          <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
+                          <a href="#!"><i class="fab fa-instagram fa-lg"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- <button
+          type="button"
+          class="btn"
+          data-toggle="button"
+          routerLink="/weather"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+        >
+          Weather
+        </button> -->
+      </div>
     </div>
   </div>
-</div>
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+
+

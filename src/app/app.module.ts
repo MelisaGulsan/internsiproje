@@ -16,6 +16,8 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { UsersListService } from './services/user-list.service';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -31,14 +33,17 @@ import { UsersListService } from './services/user-list.service';
     WeatherComponent,
     LoginComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgImageSliderModule,
+    BrowserAnimationsModule
+
   ],
   
   providers: [UsersListService],
