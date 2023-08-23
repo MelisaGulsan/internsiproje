@@ -20,13 +20,12 @@ export class NavbarComponent {
   ngOnInit(): void { this.getGithubUser();}
 
   getGithubUser(){
-    console.log(this.userList.getUserName())
+    this.name=this.userList.getUserName();
 
-    const url = `https://api.github.com/users/${this.userList.getUserName()}`;
-    this.http.get<any>(url)
+    const url = `https://api.github.com/users/${this.name}`;
+    this.http.get<User>(url)
       .subscribe(
         (response) => {
-          this.name = this.userList.getUserName();
           this.photo = response.avatar_url;
           this.hata = null;
         },
@@ -36,5 +35,6 @@ export class NavbarComponent {
           this.hata = 'Kullanıcı bulunamadı.';
         }
     );
+
   }
 }

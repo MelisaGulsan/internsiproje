@@ -25,9 +25,6 @@ export class LoginComponent implements OnInit {
       (data) => {
         list.push(data);
         this.router.navigate(['/home']);
-        console.log(list)
-        console.log(data)
-
       },
       (error) => {
         if (error.status === 404) {

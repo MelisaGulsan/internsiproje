@@ -19,12 +19,15 @@
             ></div>
           </div>
           <div class="weather card-img-overlay p-5">
-            <h4 class="mb-0">{{ city }}</h4>
-            <p class="display-2 my-3">1.28°C</p>
+            <h4 class="mb-0">{{ weatherData.name }}</h4>
+            <p class="display-2 my-3">{{weatherData.main.temp}} °C</p>
+            <p class="mb-2">{{weatherData.weather[0].description}}</p>
+
             <p class="mb-2">
               Today: <strong>{{ today | date }}</strong>
             </p>
-          </div>
+         
+          </div>    
         </div>
       </div>
     </div>

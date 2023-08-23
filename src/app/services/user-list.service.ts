@@ -11,7 +11,7 @@ export class UsersListService {
   constructor(private httpClient:HttpClient) { }
   private isAuthenticated: boolean=false;
   private userName:string=''
-
+  
   getUser(value:string):Observable<User>{
     this.isAuthenticated=true;
     this.userName=value;
