@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { LoginComponent } from '../login/login.component';
+import { User } from '../models/user';
+import { UsersListService } from '../services/user-list.service';
 
 
 @Component({
@@ -8,21 +11,22 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  userName:string='MelisaGulsan';
   name:string='';
   photo:string='';
   hata:string|null=null;
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private userList: UsersListService) { }
 
   ngOnInit(): void { this.getGithubUser();}
 
   getGithubUser(){
-    const url = `https://api.github.com/users/${this.userName}`;
+    console.log(this.userList.getUserName())
+
+    const url = `https://api.github.com/users/${this.userList.getUserName()}`;
     this.http.get<any>(url)
       .subscribe(
         (response) => {
-          this.name = response.name;
+          this.name = this.userList.getUserName();
           this.photo = response.avatar_url;
           this.hata = null;
         },

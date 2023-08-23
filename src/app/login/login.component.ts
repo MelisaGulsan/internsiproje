@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsersListService } from '../services/user-list.service';
 import { User } from '../models/user';
@@ -17,20 +16,29 @@ export class LoginComponent implements OnInit {
   users!: User[];
 
   userName: string = '';
-  //error:string="";
+  error: string = '';
 
-  ngOnInit(): void {
-   
-  }
+  ngOnInit(): void {}
   login() {
     let list: User[] = [];
-    this.usersListService.getUser(this.userName).subscribe((data) => {
-      list.push(data);
-      this.router.navigate(['/home'])
-    }
-    
+    this.usersListService.getUser(this.userName).subscribe(
+      (data) => {
+        list.push(data);
+        this.router.navigate(['/home']);
+        console.log(list)
+        console.log(data)
+
+      },
+      (error) => {
+        if (error.status === 404) {
+          this.error = 'Kullanıcı bulunamadı.'; // 404 hatası durumunda hata mesajı atama
+        } else {
+          this.error = 'Bir hata oluştu. Lütfen daha sonra tekrar deneyin.';
+        }
+      }
     );
     this.users = list;
+    
   }
   
 }

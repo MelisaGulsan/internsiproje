@@ -10,7 +10,6 @@ export class WeatherComponent implements OnInit {
   today: Date = new Date();
   city:string = "İstanbul";
   
-  //data$:Observable<any>;
   
   ngOnInit(): void {}
 }

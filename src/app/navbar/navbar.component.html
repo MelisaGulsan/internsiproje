@@ -22,13 +22,13 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      {{ userName }}
+      {{ name }}
       <i class="fas fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <div class="git navbar-nav ms-auto">
         <a
-          href="https://github.com/{{ userName }}"
+          href="https://github.com/{{ name }}"
           target="_blank"
           style="text-decoration: none"
           rel="noopener"
@@ -36,7 +36,7 @@
           <div class="container-fluid">
             <div class="gitDiv navbar-collapse">
               <p class="nav-link navbar-collapse m-2 p-1" aria-current="page">
-                Hi,<b> {{ userName }}</b>
+                Hi,<b> {{ name }}</b>
               </p>
               <img
                 [src]="photo"

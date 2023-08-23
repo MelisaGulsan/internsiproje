@@ -27,12 +27,6 @@ export class TabComponent {
       position:'Right',
       type:'tab3',
       active:false
-    },
-    {
-      name:'Tab 4',
-      position:'End',
-      type:'tab4',
-      active:false
     }
   ]
 
