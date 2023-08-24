@@ -1,37 +1,6 @@
-// button {
-//   font-size: small;
-//   color: #cce3ff;
-//   background: linear-gradient(to bottom, #000000c3, #000000);
-//   border-top: 2px #cce3ff solid;
-//   border-left: 2px #ffdecc solid;
-//   border-bottom: 2px #ff6b0f solid;
-//   border-right: 2px #ff6b0f solid;
-// }
-// button:hover {
-//   color: #ff6b0f;
-// }
-// .card div:first-of-type {
-//   background-image: url("../../../assets/magaza.jpg");
-//   border-radius: 5px;
-//   background-position: bottom;
-//   background-repeat: no-repeat;
-//   background-size: cover;
 
-//   .cardText:first-child {
-//     padding: 20px;
-//     background: #ffffffd3;
-//     border-radius: 20px;
-//     opacity: 0.8;
-//     font-weight:initial;
-//   }
-// }
 .gradient-custom {
-    /* fallback for old browsers */
     background: #f6d365;
-    
-    /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
-    
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
     }
