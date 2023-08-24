@@ -30,6 +30,14 @@ Angular CLI, Typescript (version 5.1.3) and Bootstrap (version  5.3.1) were used
 By using the form method, transactions are made according to the username obtained from the login page.  If there is a user with the written name, login is made, if not, an error message is displayed.
 
 
+![Web capture_24-8-2023_103030_localhost](https://github.com/MelisaGulsan/internsiproject/assets/74907355/4f0ad6c2-4e52-4a60-9343-be9451cc71b0)
+
+
+![Web capture_24-8-2023_103221_localhost](https://github.com/MelisaGulsan/internsiproject/assets/74907355/a1dd285d-9fc5-4136-8b14-3815f1936b0c)
+
+
+![Web capture_24-8-2023_103350_localhost](https://github.com/MelisaGulsan/internsiproject/assets/74907355/3a22e85b-54d9-48af-90fe-d7918e32de47)
+
 
 ![Web capture_24-8-2023_103515_localhost](https://github.com/MelisaGulsan/internsiproject/assets/74907355/5e124dbb-dca0-49b7-8580-01c6802adf83)
 
