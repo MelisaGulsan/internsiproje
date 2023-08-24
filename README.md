@@ -29,17 +29,14 @@ Angular CLI, Typescript (version 5.1.3) and Bootstrap (version  5.3.1) were used
 
 By using the form method, transactions are made according to the username obtained from the login page.  If there is a user with the written name, login is made, if not, an error message is displayed.
 
-![enter image description here](file:///C:/Users/meliyilmaz/Downloads/Web%20capture_24-8-2023_103030_localhost.jpeg)
 
-![enter image description here](file:///C:/Users/meliyilmaz/Downloads/Web%20capture_24-8-2023_103221_localhost.jpeg)
 
-![enter image description here](file:///C:/Users/meliyilmaz/Downloads/Web%20capture_24-8-2023_103350_localhost.jpeg)
-
-![enter image description here](file:///C:/Users/meliyilmaz/Downloads/Web%20capture_24-8-2023_103515_localhost.jpeg)
+![Web capture_24-8-2023_103515_localhost](https://github.com/MelisaGulsan/internsiproject/assets/74907355/5e124dbb-dca0-49b7-8580-01c6802adf83)
 
 ## Weather Page
 
 The Weather page used the **OpenWeatherMap** API.  Here, Istanbul's weather conditions are captured dynamically.
 
-![enter image description here](file:///C:/Users/meliyilmaz/Downloads/Web%20capture_24-8-2023_103738_localhost.jpeg)
+![Web capture_24-8-2023_103738_localhost](https://github.com/MelisaGulsan/internsiproject/assets/74907355/71aa66cd-4831-4ae5-b6e3-434307ff2a65)
+
 
