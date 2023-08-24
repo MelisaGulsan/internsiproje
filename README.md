@@ -1,4 +1,4 @@
-# Projeme Hoş Geldiniz!
+# Welcome to my project!
 
 Hi! In my project, you can login by typing your *GitHub username* and your *GitHub information* is displayed on the page that opens. The purpose of this project is to work on angular and typescript.  Some important details used are: 
 
@@ -44,6 +44,7 @@ By using the form method, transactions are made according to the username obtain
 ## Weather Page
 
 The Weather page used the **OpenWeatherMap** API.  Here, Istanbul's weather conditions are captured dynamically.
+
 
 ![Web capture_24-8-2023_103738_localhost](https://github.com/MelisaGulsan/internsiproject/assets/74907355/71aa66cd-4831-4ae5-b6e3-434307ff2a65)
 
