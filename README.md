@@ -1,3 +1,18 @@
+# Projeme Hoş Geldiniz!
+
+Hi! In my project, you can login by typing your *GitHub username* and your *GitHub information* is displayed on the page that opens. The purpose of this project is to work on angular and typescript.  Some important details used are: 
+
+ -  **Authentication**
+ - **Input-Output**
+ - **Parent-Child**
+ - **HttpClient**
+ - **Routing**
+ - **Service**
+ - **Forms**
+ - **API**
+
+ 
+
 # Github
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.7.
@@ -6,22 +21,25 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Used language and framework
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Angular CLI, Typescript (version 5.1.3) and Bootstrap (version  5.3.1) were used in this project.  
 
-## Build
+## Login and Home Pages
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+By using the form method, transactions are made according to the username obtained from the login page.  If there is a user with the written name, login is made, if not, an error message is displayed.
 
-## Running unit tests
+![enter image description here](file:///C:/Users/meliyilmaz/Downloads/Web%20capture_24-8-2023_103030_localhost.jpeg)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![enter image description here](file:///C:/Users/meliyilmaz/Downloads/Web%20capture_24-8-2023_103221_localhost.jpeg)
 
-## Running end-to-end tests
+![enter image description here](file:///C:/Users/meliyilmaz/Downloads/Web%20capture_24-8-2023_103350_localhost.jpeg)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![enter image description here](file:///C:/Users/meliyilmaz/Downloads/Web%20capture_24-8-2023_103515_localhost.jpeg)
 
-## Further help
+## Weather Page
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The Weather page used the **OpenWeatherMap** API.  Here, Istanbul's weather conditions are captured dynamically.
+
+![enter image description here](file:///C:/Users/meliyilmaz/Downloads/Web%20capture_24-8-2023_103738_localhost.jpeg)
+
