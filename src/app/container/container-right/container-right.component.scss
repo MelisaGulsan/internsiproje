@@ -1,16 +1,58 @@
-.card div:first-of-type {
-    background-image: url("https://i.dunya.com/storage/old/files/2018/3/12/406844/406844.jpg");
-    border-radius: 5px;
-    
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-  
-    .cardText:first-child {
-      padding: 20px;
-      background: #ffffffd3;
-      border-radius: 20px;
-      opacity: 0.8;
-      font-weight:initial;
+* {
+  box-sizing: border-box;
+}
+.player-container {
+  margin: auto;
+  display: table;
+  background-color: #F7BE00;
+  border: 1px solid black;
+  #playing {
+    display: none;
+  }
+  .gif {
+    visibility: hidden;
+  }
+  #playing:checked {
+    ~ .gif {
+      visibility: visible;
+    }
+    ~.btn-play {
+      display: none;
+    }
+    ~.btn-stop {
+      display: block;
     }
   }
+}
+.btn {
+  display: block;
+  width: 100%;
+  padding: 1rem 1.6rem;
+  border-top: 1px solid white;
+  font-family: Arial, sans-serif;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background-color: #444;
+  }
+  &.btn-stop {
+    display: none;
+    .icon-stop {
+      font-size: 135%;
+      line-height: 1px;
+    }
+  }
+}
+
+button {
+font-size: small;
+color: #cce3ff;
+background: linear-gradient(to bottom, #000000c3, #000000);
+border-top: 2px #cce3ff solid;
+border-left: 2px #ffdecc solid;
+border-bottom: 2px #ff6b0f solid;
+border-right: 2px #ff6b0f solid;
+}
+button:hover {
+color: #ff6b0f;
+}

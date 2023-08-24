@@ -16,7 +16,7 @@ export class ContainerLeftComponent implements OnInit {
   ngOnInit(): void {
     this.getGithubDetails();
   }
-  
+
   constructor(private userList: UsersListService) {}
 
   getGithubDetails() {
@@ -25,11 +25,7 @@ export class ContainerLeftComponent implements OnInit {
     this.userList.getUser(this.userName).subscribe((data) => {
       list.push(data);
       this.name = data.name;
-      console.log(data);
     });
     this.users = list;
-
-    console.log(this.users);
-    console.log(list);
   }
 }
